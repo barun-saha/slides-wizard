@@ -1,14 +1,17 @@
 import json
+import time
 import streamlit as st
+import streamlit.runtime.scriptrunner as st_sr
 
 import llm_helper
+import pptx_helper
 from global_config import GlobalConfig
 
 
 UI_BUTTONS = [
     'Generate slides content',
     'Generate JSON',
-    'Make the slides (requires Google sign in)'
+    'Make the slides'
 ]
 
 
@@ -18,7 +21,7 @@ def build_ui():
     """
 
     st.title('Slides Wizard')
-    st.subheader('*:blue[Create your next slide deck using AI]*')
+    st.subheader('*:blue[Create your next PowerPoint slide deck using AI]*')
     st.divider()
 
     st.header('Step 1: Generate your content')
@@ -141,16 +144,28 @@ def process_slides_contents(text: str, progress_bar: st.progress):
 
     # Now, step 3
     st.divider()
-    st.header('Step 3: Create Google Slides')
+    st.header('Step 3: Create the slides')
     st.caption('Let\'s now create the slides for you')
 
-    st.write(':red[Coming soon!]')
+    st.button(UI_BUTTONS[2], on_click=button_clicked, args=[2])
 
-    # st.button(UI_BUTTONS[2], on_click=button_clicked, args=[2])
-    #
-    # if st.session_state.clicked[2]:
-    #     progress_text = 'Creating...give it a moment'
-    #     progress_bar = st.progress(0, text=progress_text)
+    if st.session_state.clicked[2]:
+        progress_text = 'Creating...give it a moment'
+        progress_bar = st.progress(0, text=progress_text)
+
+        # Get a unique name for the file to save -- use the session ID
+        ctx = st_sr.get_script_run_ctx()
+        session_id = ctx.session_id
+        timestamp = time.time()
+        output_file_name = f'{session_id}_{timestamp}.pptx'
+
+        pptx_helper.generate_powerpoint_presentation(json_str, output_file_name)
+        st.progress(100, text='Done!')
+
+        # st.download_button('Download file', binary_contents)  # Defaults to 'application/octet-stream'
+
+        with open(output_file_name, 'rb') as f:
+            st.download_button('Download PPTX file', f, file_name=output_file_name)
 
 
 def button_clicked(button):

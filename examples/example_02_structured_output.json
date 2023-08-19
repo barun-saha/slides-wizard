@@ -1,0 +1,44 @@
+{
+    "presentation_title": "Introduction to AI",
+    "slides": [
+        {
+            "slide_number": 1,
+            "slide_heading": "Introduction to AI",
+            "slide_contents": [
+                "What is AI?",
+                "History of AI",
+                "Benefits of AI",
+                "Challenges of AI",
+                "Examples of AI",
+            ],
+        },
+        {
+            "slide_number": 2,
+            "slide_heading": "AI Pros and Cons",
+            "slide_contents": [
+                "Benefits of AI",
+                "Challenges of AI",
+                "Examples of AI",
+            ],
+        },
+        {
+            "slide_number": 3,
+            "slide_heading": "Future Prospects of AI",
+            "slide_contents": [
+                "Advancements in AI",
+                "Job prospects in AI",
+                "Potential applications of AI",
+                "Ethical considerations in AI",
+            ],
+        },
+        {
+            "slide_number": 4,
+            "slide_heading": "Conclusion",
+            "slide_contents": [
+                "Summary of AI and its impact",
+                "Career opportunities in AI",
+                "Final thoughts on AI",
+            ]
+        }
+    ]
+}

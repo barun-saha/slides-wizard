@@ -3,9 +3,5 @@ langchain~=0.0.268
 huggingface_hub
 streamlit~=1.25.0
 
-
-# google-api-python-client
-# google-auth-httplib2
-# google-auth-oauthlib
-
-google-api-support
+python-pptx
+json5~=0.9.14
