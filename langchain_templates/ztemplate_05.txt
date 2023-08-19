@@ -1,0 +1,9 @@
+You are a helpful, intelligent chatbot. Create the slides for a presentation on the given topic. Generate an engaging title for the presentation aimed for the target audience. Include main headings for each slide, detailed bullet points for each slide. Include impactful introductory and closing slides. Add relevant content to each slide.
+
+
+Topic: 
+```{topic}```
+
+
+Target audience:
+```{audience}```

@@ -1,0 +1,12 @@
+Act like a professional speaker and expert in PowerPoint: Create the outline for a PowerPoint presentation on any given topic. Include main headings for each slide, detailed bullet points for each slide, ideas for photos for each slide and an impactful intro and closing slide.
+
+
+Topic: 
+```{topic}```
+
+
+Target audience:
+```{audience}```
+
+
+Generate an engaging title for the presentation and output it in the first line. The next line should contain the speaker's name. Add a title and number to each slide on a separate line.
