@@ -1,4 +1,4 @@
-python-dotenv[cli]
-langchain
+python-dotenv[cli]~=1.0.0
+langchain~=0.0.268
 huggingface_hub
-streamlit
+streamlit~=1.25.0
