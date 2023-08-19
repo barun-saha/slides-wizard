@@ -1,5 +1,4 @@
 import json
-
 import streamlit as st
 
 import llm_helper
@@ -9,7 +8,7 @@ from global_config import GlobalConfig
 UI_BUTTONS = [
     'Generate slides content',
     'Generate JSON',
-    'Make the slides'
+    'Make the slides (requires Google sign in)'
 ]
 
 
@@ -140,10 +139,23 @@ def process_slides_contents(text: str, progress_bar: st.progress):
 
     progress_bar.progress(100, text='Done!')
 
+    # Now, step 3
+    st.divider()
+    st.header('Step 3: Create Google Slides')
+    st.caption('Let\'s now create the slides for you')
+
+    st.write(':red[Coming soon!]')
+
+    # st.button(UI_BUTTONS[2], on_click=button_clicked, args=[2])
+    #
+    # if st.session_state.clicked[2]:
+    #     progress_text = 'Creating...give it a moment'
+    #     progress_bar = st.progress(0, text=progress_text)
+
 
 def button_clicked(button):
     """
-    Function to update the value in session state.
+    Update the button clicked value in session state.
     """
 
     st.session_state.clicked[button] = True

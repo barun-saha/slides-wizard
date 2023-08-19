@@ -25,3 +25,5 @@ class GlobalConfig:
 
     PRELOAD_DATA_FILE = 'examples/example_02.json'
     SLIDES_TEMPLATE_FILE = 'langchain_templates/template_07.txt'
+
+    GOOGLE_SLIDES_CREDENTIALS: str = os.getenv('GOOGLE_SLIDES_CREDENTIALS')
