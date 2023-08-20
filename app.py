@@ -98,6 +98,13 @@ def process_topic_inputs(name: str, topic: str, audience: str, progress_bar):
             st.write(f'''Slides content:\n{slides_content}''')
             progress_bar.progress(100, text='Done!')
 
+            st.info(
+                'The generated content doesn\'t look so great?'
+                ' Need alternatives? Just change your description text and try again.'
+                ' For example, you can start describing like "Create a slide deck on..."',
+                icon="ℹ️"
+            )
+
             # Move on to step 2
             st.divider()
             st.header('Step 2: Make it structured')
